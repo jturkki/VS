@@ -1,3 +1,10 @@
+/*
+  Ohjelma testaa NTC-anturin käynnistyksen yhteydessä sensorin
+  asettumisaikaa. Kun nappia B1 painaa, asetetaan ntc-sensrorille
+  virrat päälle ja suoritetaan heti 50 mittausta lyhyin aikavälein.
+  Lopuksi mittaustulokset tulostetaan monitoriin.
+*/
+
 #include <Arduino.h>
 
 int buttonB1 = 4;
