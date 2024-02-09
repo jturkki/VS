@@ -8,8 +8,8 @@
 #include <Arduino.h>
 
 int buttonB1 = 4;
-int pwrNTC = A2;
-int sensoriNTC = A0;
+int pwrNTC = A1;
+int sensoriNTC = A2;
 unsigned long int alkuAika = 0;
 unsigned long int loppuAika = 0;
 int mittaukset[50];
@@ -38,7 +38,7 @@ void loop()
     for (int i=0; i<50; i++)
     {
       mittaukset[i] = analogRead(sensoriNTC);       // luetaan 50 mittausta taulukkoon
-      delay(10);
+      delayMicroseconds(70);
     }
     loppuAika = micros();             // loppuaika talteen
     a = 1;                            // a varmistaa että mittaukset tehdään vain kerran
