@@ -38,15 +38,15 @@ void loop()
     for (int i=0; i<50; i++)
     {
       mittaukset[i] = analogRead(sensoriNTC);       // luetaan 50 mittausta taulukkoon
-      delayMicroseconds(70);
+      delayMicroseconds(100);
     }
     loppuAika = micros();             // loppuaika talteen
     a = 1;                            // a varmistaa että mittaukset tehdään vain kerran
 
     for (int i=0; i<50; i++)
     {
-      Serial.print(mittaukset[i]);      // tulostetaan mittaukset
-      Serial.print("; ");
+      Serial.println(mittaukset[i]);      // tulostetaan mittaukset
+      
     }
     Serial.println(" ");
     Serial.print("Kokonaisaika: ");
